@@ -1,0 +1,30 @@
+{
+  "name": "electionmaps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run copy-html",
+    "start": "lite-server",
+    "copy-html": "copyfiles -u 1 src/index.html dist",
+    "test": "npm run build && npm run start",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitzryan/ElectionMaps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitzryan/ElectionMaps/issues"
+  },
+  "homepage": "https://github.com/nitzryan/ElectionMaps#readme",
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "gh-pages": "^6.2.0",
+    "lite-server": "^2.6.1",
+    "typescript": "^5.7.2"
+  }
+}
